@@ -1,50 +1,85 @@
 :root {
-    --backgroung: #000;
+    --background: #000;
+    --background-card: #121212;
+    --text-color: #a7a7a7;
+    --bright-color: #fff;
+    /* layout */
+    --top-bar-h: 50px;
+    --player-bar-h: 72px;
+    --nav-bar-w: 230px;
+    --gap-flex: 8px;
+    --lyt-border: 10px;
+    /* padding*/
+    --container-pad: 8px;
+    --layout-pad: 24px;
+    
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
 }
+
+/* ------- GENERAL SETTING ------ */
 
 html {
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: var(--background);
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    gap: var(--gap-flex);
+    padding: var(--container-pad);
 }
+/* ---------- GENERAL SETTING -------- */
 
+/***********************
+TOP BAR
+***********************/
 .top-bar {
-    height: 50px;
-    width: calc(100vw - 230px);
-    position: absolute;
+    color: var(--text-color);
+    width: 100vw;
+    height: var(--top-bar-h);
     top: 0;
     right: 0;
-    background-color: aqua;
 }
 
+/***********************
+NAV BAR
+***********************/
 .nav-bar {
-    width: 230px;
-    height: calc(100vh - 72px);
-    background-color: salmon;
+    background-color: var(--background-card);
+    color: var(--text-color);
+    width: calc(var(--nav-bar-w) - var(--gap-flex) - var(--container-pad));
+    height: calc(100vh - var(--top-bar-h) - var(--player-bar-h) - var(--gap-flex) * 2 - var(--container-pad) * 2);
+    padding-top: var(--layout-pad);
+    border-radius: var(--lyt-border);
 }
 
-.main {
-    height: calc(100vh - 72px);
-    width: calc(100vw - 230px);
-    background-color: slateblue;
-    overflow-y: scroll;
-    padding: calc(50px + 50px) 2rem 0;
-}
-
+/***********************
+PLAYER BAR
+***********************/
 .player-bar {
-    height: 72px;
+    color: var(--text-color);
     width: 100vw;
-    background-color: gray;
-    z-index: 10;
+    height: var(--player-bar-h);
+}
+
+/***********************
+MAIN
+***********************/
+.main {
+    background-color: var(--background-card);
+    color: var(--text-color);
+    width: calc(100vw - var(--nav-bar-w) - var(--container-pad));
+    height: calc(100vh - var(--top-bar-h) - var(--player-bar-h) - var(--gap-flex) * 2 - var(--container-pad) * 2);
+    padding: var(--layout-pad) var(--layout-pad) 0;
+    border-radius: var(--lyt-border);
+    overflow-y: auto;
 }
