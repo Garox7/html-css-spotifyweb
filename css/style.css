@@ -56,6 +56,7 @@ TOP BAR
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: var(--container-pad);
 }
 
 .top__bar__logo {
@@ -82,27 +83,39 @@ TOP BAR
 }
 
 .top__bar__input__search {
-    background-color: var(--background-input);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
     font-size: 20px;
+    position: relative;
 }
 
 .top__bar__input__search:hover {
-    background-color: var(--background-input-bright);
     color: var(--bright-color);
 }
 
+.top__bar__input__search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 12px;
+}
+
 .top__bar__input__search input {
+    background-color: var(--background-input);
+    color: var(--bright-color);
     height: 100%;
     width: 400px;
-    padding: 5px 20px;
-    background-color: transparent;
-    color: var(--bright-color);
+    padding:6px 48px;
+    border-radius: 30px;
     border: none;
     outline: none;
+}
+
+.top__bar__input__search input:hover {
+    background-color: var(--background-input-bright);
+}
+
+.top__bar__input__search input:focus {
+    border: 1px solid var(--bright-color);
+    background-color: var(--background-input-bright);
 }
 
 input[type = 'search']::-webkit-search-cancel-button{
@@ -111,6 +124,7 @@ input[type = 'search']::-webkit-search-cancel-button{
 
 .top__bar__profile {
     padding: 10px 14px;
+    margin-right: 0;
 }
 
 /***********************
@@ -124,6 +138,8 @@ NAV BAR
     padding-top: var(--layout-pad);
     border-radius: var(--lyt-border);
 }
+
+
 
 /***********************
 PLAYER BAR
