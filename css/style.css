@@ -1,6 +1,8 @@
 :root {
     --background: #000;
     --background-card: #121212;
+    --background-input: #242424;
+    --background-input-bright: #2a2a2a;
     --text-color: #a7a7a7;
     --bright-color: #fff;
     /* layout */
@@ -22,7 +24,6 @@
 }
 
 /* ------- GENERAL SETTING ------ */
-
 html {
     font-family: 'Montserrat', sans-serif;
 }
@@ -37,17 +38,79 @@ body {
     gap: var(--gap-flex);
     padding: var(--container-pad);
 }
+
+img {
+    width: 100%;
+}
 /* ---------- GENERAL SETTING -------- */
 
 /***********************
 TOP BAR
 ***********************/
-.top-bar {
+.top__bar {
     color: var(--text-color);
     width: 100vw;
     height: var(--top-bar-h);
     top: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top__bar__logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.top__bar__input {
+    display: flex;
+}
+
+.top__bar__input__home, .top__bar__profile {
+    background-color: var(--background-input);
+    font-size: 20px;
+    padding: 12px;
+    margin-right: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.top__bar__input__home:hover, .top__bar__profile:hover {
+    background-color: var(--background-input-bright);
+    color: var(--bright-color);
+}
+
+.top__bar__input__search {
+    background-color: var(--background-input);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 20px;
+}
+
+.top__bar__input__search:hover {
+    background-color: var(--background-input-bright);
+    color: var(--bright-color);
+}
+
+.top__bar__input__search input {
+    height: 100%;
+    width: 400px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: var(--bright-color);
+    border: none;
+    outline: none;
+}
+
+input[type = 'search']::-webkit-search-cancel-button{
+	-webkit-appearance: none;
+}
+
+.top__bar__profile {
+    padding: 10px 14px;
 }
 
 /***********************
