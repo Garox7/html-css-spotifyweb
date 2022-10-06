@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <title>Spotify</title>
     <meta charset="UTF-8">
@@ -24,9 +24,12 @@
                    TOP BAR
         -------------------------->
         <div class ="top__bar">
+            <!-- logo -->
             <div class="top__bar__logo">
                 <img src="/img/logo.svg" alt="">
             </div>
+
+            <!-- home & search bar  -->
             <div class="top__bar__input">
                 <div class="top__bar__input__home">
                     <i class="fa-solid fa-house"></i>
@@ -36,6 +39,8 @@
                     <input type="search" placeholder="Cosa vuoi ascoltare?">
                 </form>
             </div>
+
+            <!-- profilo  -->
             <div class="top__bar__profile">
                 <i class="fa-regular fa-user"></i>
             </div>
@@ -44,8 +49,52 @@
         <!------------------------
                    NAV BAR
         -------------------------->
-        <div class="nav-bar">
+        <div class="nav__bar">
+            <!-- librerie di musica  -->
+            <ul class="nav__bar__library">
+                <li><a href="#" class="hov--transition">
+                        <div class="nav__bar__ico your--library">
+                            <img src="/img/libreria.svg" alt="">
+                        </div>
+                        <span class="nav__bar__library__title">La tua libreria</span>
+                    </a>
+                </li>
+                <li><a href="#" class="hov--transition">
+                        <div class="nav__bar__ico fix--ico add--library">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span class="nav__bar__library__title">Crea playlist</span>
+                    </a>
+                </li>
+                <li><a href="#" class="hov--transition">
+                        <div class="nav__bar__ico fix--ico wish--library">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <span class="nav__bar__library__title">Brani che ti piacciono</span>
+                    </a>
+                </li>
+            </ul>
+
+            <hr class="nav__bar__divider">
+
+            <!-- playlist ascoltate  -->
+            <ul class="nav__bar__playlists">
+                <li><a href="#" class="hov--transition">Dance Hits 2010s</a></li>
+                <li><a href="#" class="hov--transition">Dance Hits 2000s</a></li>
+                <li><a href="#" class="hov--transition">Viva Latino</a></li>
+                <li><a href="#" class="hov--transition">Hot Hits Italia</a></li>
+                <li><a href="#" class="hov--transition">Daily Mix 1</a></li>
+            </ul>
             
+            <!-- tasto installa app  -->
+            <div class="nav__bar__install">
+                <a href="#" class="hov--transition">
+                    <div class="nav__bar__ico">
+                        <img src="/img/download.svg" alt="">
+                    </div>
+                    <span class="nav__bar__library__title">Installa app</span>
+                </a>
+            </div>
         </div>
         
         <!------------------------

@@ -1,19 +1,21 @@
 :root {
+    --text-color: #a7a7a7;
+    --bright-color: #fff;
     --background: #000;
     --background-card: #121212;
     --background-input: #242424;
     --background-input-bright: #2a2a2a;
-    --text-color: #a7a7a7;
-    --bright-color: #fff;
+    --background-likesong-gradient: linear-gradient(135deg,#450af5,#c4efd9);
     /* layout */
     --top-bar-h: 50px;
     --player-bar-h: 72px;
-    --nav-bar-w: 230px;
+    --nav-bar-w: 260px;
     --gap-flex: 8px;
     --lyt-border: 10px;
-    /* padding*/
+    /* padding - gap... */
     --container-pad: 8px;
     --layout-pad: 24px;
+    --gap-item-nav: 16px;
     
 }
 
@@ -24,13 +26,9 @@
 }
 
 /* ------- GENERAL SETTING ------ */
-html {
-    font-family: 'Montserrat', sans-serif;
-}
+html {font-family: 'Montserrat', sans-serif;}
 
-body {
-    background-color: var(--background);
-}
+body {background-color: var(--background);}
 
 .container {
     display: flex;
@@ -39,9 +37,9 @@ body {
     padding: var(--container-pad);
 }
 
-img {
-    width: 100%;
-}
+img {width: 100%;}
+
+a {text-decoration: none;}
 /* ---------- GENERAL SETTING -------- */
 
 /***********************
@@ -51,8 +49,6 @@ TOP BAR
     color: var(--text-color);
     width: 100vw;
     height: var(--top-bar-h);
-    top: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,10 +99,10 @@ TOP BAR
     color: var(--bright-color);
     height: 100%;
     width: 400px;
-    padding:6px 48px;
+    padding: 6px 48px;
     border-radius: 30px;
     border: none;
-    outline: none;
+    outline-style: none;
 }
 
 .top__bar__input__search input:hover {
@@ -114,7 +110,7 @@ TOP BAR
 }
 
 .top__bar__input__search input:focus {
-    border: 1px solid var(--bright-color);
+    border: 2px solid var(--bright-color);
     background-color: var(--background-input-bright);
 }
 
@@ -130,16 +126,97 @@ input[type = 'search']::-webkit-search-cancel-button{
 /***********************
 NAV BAR
 ***********************/
-.nav-bar {
+.nav__bar {
     background-color: var(--background-card);
-    color: var(--text-color);
     width: calc(var(--nav-bar-w) - var(--gap-flex) - var(--container-pad));
     height: calc(100vh - var(--top-bar-h) - var(--player-bar-h) - var(--gap-flex) * 2 - var(--container-pad) * 2);
-    padding-top: var(--layout-pad);
     border-radius: var(--lyt-border);
+    position: relative;
 }
 
+.nav__bar__library {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+}
 
+.hov--transition {
+    opacity: .7;
+    transition: .2s linear;
+}
+
+.hov--transition:hover {
+    opacity: 1;
+}
+
+.nav__bar__library a {
+    color: var(--bright-color);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-item-nav);
+    height: 40px;
+    padding: 0 22px;
+}
+
+.nav__bar__ico {
+    width: 24px;
+    height: 24px;
+}
+
+.fix--ico {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.add--library {
+    background-color: var(--bright-color);
+    color: #000;
+}
+
+.wish--library {
+    background: var(--background-likesong-gradient);
+}
+
+.nav__bar__library__title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav__bar__divider {
+    background-color: var(--text-color);
+    height: 1px;
+    border:none;
+    margin: 12px 22px;
+    opacity: .2;
+}
+
+.nav__bar__playlists li {
+    margin-bottom: 14px;
+}
+
+.nav__bar__playlists a {
+    color: var(--bright-color);
+    padding: 0 22px;
+    font-size: 14px;
+}
+
+.nav__bar__install {
+    position: absolute;
+    left: 22px;
+    bottom: 0;
+    height: 30px;
+}
+
+.nav__bar__install a {
+    color: var(--bright-color);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-item-nav);
+}
 
 /***********************
 PLAYER BAR
