@@ -694,7 +694,7 @@ MAIN
     }
 
     .main__trendy.margin--section {
-        margin-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
+        padding-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
     }
 
     .main__trendy__title h2 {
@@ -753,7 +753,6 @@ MAIN
     .bottom__bar__player__img {
         width: 39px;
         height: 39px;
-    
     }
 
     .bottom__bar__player__img img {
