@@ -60,7 +60,7 @@
             <ul class="nav__bar__library">
                 <li><a href="#" class="hov--transition">
                         <div class="nav__bar__ico your--library">
-                            <img src="/img/libreria.svg" alt="">
+                            <svg role="img" height="24" width="24" viewBox="0 0 24 24" fill="#fff"><path d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"></path></svg>
                         </div>
                         <span class="nav__bar__library__title">La tua libreria</span>
                     </a>
@@ -112,6 +112,10 @@
             <div class="main__playlists">
                 <div class="main__heard__title">
                     <h1>Buongiorno</h1>
+                    <div class="main__heard__title__ico">
+                        <i class="fa-regular fa-bell"></i>
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
                 </div>
                 <div class="main__heard__list">
                     <div class="main__heard__playlist">
@@ -123,6 +127,12 @@
                             <div class="main__heard__cover__play-btn">
                                 <i class="fa-solid fa-circle-play btn--green"></i>
                             </div>
+                            <div class="main__heard__cover__rhythm-bar">
+                                <span class="first--bar FirstBaila"></span>
+                                <span class="second--bar SecondBaila"></span>
+                                <span class="third--bar ThirdBaila"></span>
+                            </div>
+
                         </div>
                     </div>
 
@@ -275,8 +285,223 @@
                             <p>La carica giusta per i tuoi allenamenti</p>
                         </div>
                     </div>
-                    <div class="main__trendy__playlist"></div>
-                    <div class="main__trendy__playlist"></div>
+                    <div class="main__trendy__playlist mobile--display"></div>
+                    <div class="main__trendy__playlist mobile--display"></div>
+                </div>
+            </div>
+
+            <div class="main__trendy">
+                <div class="main__trendy__title">
+                    <h2>Continua ad ascoltare</h2>
+                    <a class="view-all" href="#">visualizza tutto</a>
+                </div>
+
+                <div class="main__trendy__list">
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover7.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>graffiti pop</h3>
+                            <p>Il suono dello street pop in Italia</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover8.jpg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>il mio daily</h3>
+                            <p>Un mix di notizie e musica solo per te</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover9.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>estate 2022</h3>
+                            <p>Le hit più ascoltate degli dell'estate 2022</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover10.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>dance hits</h3>
+                            <p>All the big ones with Fred</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover11.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>top 50 italia</h3>
+                            <p>Italia: il tuo aggiornamento...</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background">
+                        <div class="main__trendy__playlist__cover">
+                            <img src="/img/trendy-cover6.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>alta intensità</h3>
+                            <p>Allenamento o prepartita</p>
+                        </div>
+                    </div>
+                    <div class="main__trendy__playlist mobile--display"></div>
+                    <div class="main__trendy__playlist mobile--display"></div>
+                </div>
+            </div>
+
+            <!-- artisti preferiti  -->
+            <div class="main__trendy margin--section">
+                <div class="main__trendy__title">
+                    <h2>I tuoi artisti preferiti</h2>
+                    <a class="view-all" href="#">visualizza tutto</a>
+                </div>
+
+                <div class="main__trendy__list">
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/jbalvin.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>j balvin</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/ozuna.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>ozuna</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/rihanna.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>rihanna</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/capo-plaza.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>capo plaza</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/luche.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>luchè</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="main__trendy__playlist playlist--background trendy--artist">
+                        <div class="main__trendy__playlist__cover cover--rounded">
+                            <img src="/img/gue.jpeg" alt="">
+                            <div class="main__trendy__playlist__cover__play-btn FadeIn">
+                                <i class="fa-solid fa-circle-play btn--green"></i>
+                            </div>
+                        </div>
+                        <div class="main__trendy__playlist__description">
+                            <h3>guè</h3>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="main__trendy__playlist mobile--display trendy--artist"></div>
+                    <div class="main__trendy__playlist mobile--display trendy--artist"></div>
+                </div>
+            </div>
+
+            <!-- bottom nav solo mobile  -->
+            <div class="bottom__bar--mobile">
+                <div class="bottom__bar__player">
+                    <div class="bottom__bar__player__track">
+                        <div class="bottom__bar__player__img">
+                            <img src="/img/cover-song.jpeg" alt="">
+                        </div>
+                        <div class="bottom__bar__player__info">
+                            <p class="bottom__bar__player__title">capri sun</p>
+                            <a class="bottom__bar__player__artist" href="#">Capo Plaza</a>
+                        </div>
+                    </div>
+                    <div class="bottom__bar__player__controls">
+                        <div class="bottom__bar__player__controls__ico">
+                            <svg role="presentation" height="24" width="24" viewBox="0 0 16 16"><path d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0114.25 15h-6.5A1.75 1.75 0 016 13.25V2.75zm1.75-.25a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25h-6.5zm-6 0a.25.25 0 00-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 010 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"></path><path d="M13 10a2 2 0   11-4 0 2 2 0 014 0zm-1-5a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                        </div>
+                        <div class="bottom__bar__player__controls__ico">
+                            <svg role="img" height="24" width="24" viewBox="0 0 16 16"><path d="M2.7 1a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7H2.7zm8 0a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-2.6z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom__bar__nav-bar">
+                    <div class="bottom__bar__btn btn--home">
+                        <svg role="img" height="24" width="24" viewBox="0 0 24 24"><path d="M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z"></path></svg>
+                        <span class="btn--label">Home</span>
+                    </div>
+                    <div class="bottom__bar__btn btn--search">
+                        <svg role="img" height="24" width="24" class="Svg-ytk21e-0 jAKAlG mOLTJ2mxkzHJj6Y9_na_" aria-hidden="true" viewBox="0 0 24 24"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path></svg>
+                        <span class="btn--label">Ricerca</span>
+                    </div>
+                    <div class="bottom__bar__btn btn--library">
+                        <svg role="img" height="24" width="24" viewBox="0 0 24 24"><path d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1 1h-6a1 1 0 01-1-1V3a1 1 0 01.5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zm6 0a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1z"></path></svg>
+                        <span class="btn--label">Libreria</span>
+                    </div>
                 </div>
             </div>
         </div>
