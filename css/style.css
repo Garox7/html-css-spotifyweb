@@ -555,7 +555,8 @@ MAIN
         width: 100vw;
         height: 100vh;
         padding: var(--layout-pad) var(--layout-pad-mobile) 0;
-        border-radius: none;
+        border-radius: 0;
+        overflow-y:unset;
     }
 
     .main__heard__title {
