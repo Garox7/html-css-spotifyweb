@@ -18,6 +18,7 @@
     --top-bar-h: 50px;
     --player-bar-h: 72px;
     --nav-bar-w: 260px;
+    --nav-bar-w-minitablet: 200px;
     --gap-flex: 8px;
     --lyt-border: 10px;
     /* padding - gap... */
@@ -38,7 +39,7 @@ html {font-family: 'Montserrat', sans-serif;}
 
 body {background-color: var(--background);}
 
-img {width: 100%;}
+img {max-width: 100%;}
 
 a {text-decoration: none;}
 
@@ -70,11 +71,17 @@ TOP BAR
     cursor: pointer;
 }
 
-.top__bar__input {
-    display: flex;
+.top__bar__logo--mobile {
+    display: none;
 }
 
-.top__bar__input__home, .top__bar__profile {
+.top__bar__input {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.input--rounded {
     background-color: var(--background-input);
     font-size: 20px;
     padding: 12px;
@@ -83,7 +90,7 @@ TOP BAR
     cursor: pointer;
 }
 
-.top__bar__input__home:hover, .top__bar__profile:hover {
+.input--hover:hover {
     background-color: var(--background-input-bright);
     color: var(--bright-color);
 }
@@ -120,15 +127,24 @@ TOP BAR
 }
 
 .top__bar__input__search input:focus {
-    border: 2px solid var(--bright-color);
     background-color: var(--background-input-bright);
+    border: 2px solid var(--bright-color);
 }
 
-input[type = 'search']::-webkit-search-cancel-button{
+input[type = 'search']::-webkit-search-cancel-button {
+    appearance: none;
 	-webkit-appearance: none;
 }
 
 .top__bar__profile {
+    display: flex;
+}
+
+.top__bar__setting {
+    display: none;
+}
+
+.top__bar__user {
     padding: 10px 14px;
     margin-right: 0;
 }
@@ -439,12 +455,12 @@ PLAYER BAR
     padding: 0 8px;
 }
 
+/* album  */
 .player__widget {
     display: flex;
     align-items: center;
 }
 
-/* album  */
 .player__album {
     position: relative;
 }
@@ -458,9 +474,10 @@ PLAYER BAR
     background-color: rgba(0, 0, 0, .8);
     color: var(--text-color);
     position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 5px;
+    top: 6px;
+    right: 3px;
+    padding: 4px 5px;
+    border-radius: 100%;
     opacity: 0;
     cursor: pointer;
 }
@@ -471,38 +488,46 @@ PLAYER BAR
 
 .player__album__ico:hover {
     color: var(--bright-color);
-    scale: 1.1;
+    scale: 1.08;
 }
 
-.player__album__title {
+.player__album__info {
     margin: 0 20px;
 }
 
-.player__album__title > p {
+.player__album__title {
     color: var(--bright-color);
     font-size: 13px;
+    white-space: nowrap;
     cursor: pointer;
 }
 
-.player__album__title > p:hover {
+.player__album__title:hover {
     text-decoration: underline;
 }
 
-.player__album__title > a {
+.pleyer__album__artist {
     color: var(--text-color);
     font-size: 10px;
+    white-space: nowrap;
 }
 
-.player__album__title > a:hover {
+.pleyer__album__artist:hover {
     color: var(--bright-color);
     text-decoration: underline;
 }
 
-.player__widget i:hover {
+.player__album__btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.player__album__btn i:hover {
     color: var(--bright-color);
 }
 
-.player__widget .fa-heart {
+.player__album__btn .fa-heart {
     margin-right: 18px;
 }
 
@@ -514,7 +539,6 @@ PLAYER BAR
     align-items: center;
     max-width: 700px;
     width: 40%;
-    height: 100%;
 }
 
 .player__controls__btn {
@@ -554,21 +578,21 @@ PLAYER BAR
 }
 .player__controls__playback__time {
     font-size: 11px;
+    cursor: default;
 }
 
 .player__controls__playback__bar {
     background-color: var(--progress-bar-color);
     height: 4px;
     width: 100%;
-    position: relative;
     border-radius: 4px;
+    position: relative;
 }
 
 .player__controls__playback__progress {
     background-color: var(--bright-color);
-    height: 4px;
     width: var(--progress-bar-progression);
-    flex-grow: 1;
+    height: 4px;
     border-radius: 4px;
 }
 
@@ -586,11 +610,11 @@ PLAYER BAR
     opacity: 0;
 }
 
-.player__controls__playback__bar:hover :nth-child(1) {
+.player__controls__playback:hover .progress--color {
    background-color: var(--bright-color-accent);
 }
 
-.player__controls__playback__bar:hover :nth-child(2) {
+.player__controls__playback:hover .cursor--appear {
     opacity: 1;
 }
 
@@ -598,8 +622,8 @@ PLAYER BAR
 .player__settings {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* width: 20vw; */
+    width: 20%;
+    max-width: 200px;
 }
 
 .player__settings i {
@@ -612,6 +636,4 @@ PLAYER BAR
 
 .player__settings .player__controls__playback__bar {
     width: 100%;
-    min-width: 70px;
-    flex: 1 1 125px;
 }

@@ -26,12 +26,13 @@
         <div class ="top__bar">
             <!-- logo -->
             <div class="top__bar__logo">
-                <img src="/img/logo.svg" alt="">
+                <img class="top__bar__logo--desktop" src="/img/logo.svg" alt="Logo">
+                <img class="top__bar__logo--mobile" src="/img/logo-small.svg" alt="Logo">
             </div>
 
             <!-- home & search bar  -->
             <div class="top__bar__input">
-                <div class="top__bar__input__home">
+                <div class="top__bar__input__home input--rounded input--hover">
                     <i class="fa-solid fa-house"></i>
                 </div>
                 <form class="top__bar__input__search" action="search">
@@ -42,7 +43,12 @@
 
             <!-- profilo  -->
             <div class="top__bar__profile">
-                <i class="fa-regular fa-user"></i>
+                <div class=" top__bar__setting input--rounded input--hover">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="top__bar__user input--rounded input--hover">
+                    <i class="fa-regular fa-user"></i>
+                </div>
             </div>
         </div>
 
@@ -287,12 +293,14 @@
                         <i class="fa-solid fa-chevron-up"></i>
                     </div>
                 </div>
-                <div class="player__album__title">
-                    <p>Capri Sun</p>
+                <div class="player__album__info">
+                    <p class="player__album__title">Capri Sun</p>
                     <a class="pleyer__album__artist" href="">Capo Plaza</a>
                 </div>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-tv"></i>
+                <div class="player__album__btn">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-tv"></i>
+               </div>
             </div>
 
             <!-- player   -->
@@ -307,8 +315,8 @@
                 <div class="player__controls__playback">
                     <div class="player__controls__playback__time">0:46</div>
                     <div class="player__controls__playback__bar">
-                        <div class="player__controls__playback__progress"></div>
-                        <div class="player__controls__playback__cursor"></div>
+                        <div class="player__controls__playback__progress progress--color"></div>
+                        <div class="player__controls__playback__cursor cursor--appear"></div>
                     </div>
                     <div class="player__controls__playback__time">2:52</div>
                 </div>
@@ -319,9 +327,11 @@
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <div class="player__controls__playback__bar">
-                    <div class="player__controls__playback__progress"></div>
-                    <div class="player__controls__playback__cursor"></div>
+                <div class="player__controls__playback">
+                    <div class="player__controls__playback__bar">
+                        <div class="player__controls__playback__progress progress--color"></div>
+                        <div class="player__controls__playback__cursor cursor--appear"></div>
+                    </div>
                 </div>
             </div>
 
