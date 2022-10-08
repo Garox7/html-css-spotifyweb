@@ -7,7 +7,7 @@
     --background-playlist-hover: #282828;
     --background-likesong-gradient: linear-gradient(135deg,#450af5,#c4efd9);
     --background-main-default: #4820b0;
-    --background-main-gradient:linear-gradient(#00000099 0,var(--background-card) 40%);
+    --background-main-gradient:linear-gradient(#00000099 0, var(--background-card) 40%);
     --background-transparent: #ffffff1a;
     --backgroun-transparent-hover: #ffffff33;
     --text-color: #a7a7a7;
@@ -555,8 +555,6 @@ MAIN
         width: 100vw;
         height: 100vh;
         padding: var(--layout-pad) var(--layout-pad-mobile) 0;
-        border-radius: 0;
-        overflow-y:unset;
     }
 
     .main__heard__title {
@@ -694,7 +692,7 @@ MAIN
     }
 
     .main__trendy.margin--section {
-        padding-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
+        margin-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
     }
 
     .main__trendy__title h2 {
@@ -732,6 +730,7 @@ MAIN
         left: 0;
         bottom: 0;
         right: 0;
+        z-index: 10;
     }
 
     .bottom__bar__player {
