@@ -8,6 +8,7 @@
     --background-likesong-gradient: linear-gradient(135deg,#450af5,#c4efd9);
     --background-main-default: #4820b0;
     --background-main-gradient:linear-gradient(#00000099 0, var(--background-card) 40%);
+    --background-main-gradient-mobile: linear-gradient(rgba(18 , 18 , 18, .8) 25%, rgba(18, 18, 18, .9) 50%, rgba(18, 18, 18) 75%);
     --background-transparent: #ffffff1a;
     --backgroun-transparent-hover: #ffffff33;
     --text-color: #a7a7a7;
@@ -553,7 +554,7 @@ MAIN
 @media screen and (max-width: 549px) {
     .main {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         padding: var(--layout-pad) var(--layout-pad-mobile) 0;
     }
 
@@ -687,12 +688,12 @@ MAIN
         }
     }
 
-    .view-all {
-        display: none;
+    .main__trendy.margin--section {
+        padding-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
     }
 
-    .main__trendy.margin--section {
-        margin-bottom: calc(var(--bottom-bar-mobile-h) + 15px);
+    .view-all {
+        display: none;
     }
 
     .main__trendy__title h2 {
@@ -712,7 +713,7 @@ MAIN
         overflow-x: scroll;
     }
 
-    .main__trendy__list::-webkit-scrollbar{
+    .main__trendy__list::-webkit-scrollbar {
         display: none;
     }
 
@@ -721,7 +722,7 @@ MAIN
     }
 
     .bottom__bar--mobile {
-        background-image: linear-gradient(transparent 5%, rgba(0, 0, 0, .8) 35%, var(--background-card) 60%);
+        background-image: var(--background-main-gradient-mobile);
         color: var(--text-color);
         height: var(--bottom-bar-mobile-h);
         display: flex;
@@ -776,8 +777,7 @@ MAIN
     .bottom__bar__nav-bar {
         display: flex;
         justify-content: space-around;
-        justify-self: flex-end;
-        height: 70px;
+        height: 75px;
     }
 
     .bottom__bar__player__controls {
