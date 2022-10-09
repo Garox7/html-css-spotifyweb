@@ -358,7 +358,7 @@ MAIN
     border-radius: 4px;
     display: flex;
     align-items: center;
-    min-width: 250px;
+    min-width: 215px;
     flex: 1 1 calc(100% / 3 - var(--gap-item-nav) * 2);
     cursor: pointer;
     transition: background-color .3s linear;
@@ -502,17 +502,17 @@ MAIN
 
 .playlist--background:hover .main__trendy__playlist__cover__play-btn {
     opacity:1;
-    animation: FadeIn .2s linear;
+    animation: FadeIn .2s linear both;
 }
 
 @keyframes FadeIn {
     0%{
         opacity: 0;
-        bottom: -4px;
+        bottom: -2px;
     }
     100% {
         opacity: 1;
-        bottom:0;
+        bottom: 8px;
     }
 }
 
